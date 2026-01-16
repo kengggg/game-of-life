@@ -1,0 +1,22 @@
+# Rust
+target/
+Cargo.lock
+
+# WASM
+pkg/
+
+# Web
+www/node_modules/
+www/dist/
+www/package-lock.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
