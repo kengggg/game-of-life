@@ -8,7 +8,6 @@ pkg/
 # Web
 www/node_modules/
 www/dist/
-www/package-lock.json
 
 # IDE
 .idea/
