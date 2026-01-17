@@ -6,8 +6,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bootstrap.js",
+    publicPath: './',
   },
-  mode: "development",
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   experiments: {
     asyncWebAssembly: true,
   },

@@ -11,6 +11,43 @@ A Conway's Game of Life implementation with color blending for 25 company member
 - Fullscreen browser display
 - Smooth 60fps animation
 
+## Live Demo
+
+🌐 **[View Live Demo](https://kengggg.github.io/game-of-life/)**
+
+The application is automatically deployed to GitHub Pages on every push to the master branch.
+
+## Deployment
+
+### Automatic Deployment
+
+This project uses GitHub Actions for continuous deployment to GitHub Pages. Every push to the `master` branch automatically:
+
+1. Builds the Rust WebAssembly module with optimizations
+2. Bundles the web assets with webpack in production mode
+3. Deploys to GitHub Pages
+
+You can monitor deployment status at: [GitHub Actions](https://github.com/kengggg/game-of-life/actions)
+
+### Manual Deployment
+
+To test the production build locally before deploying:
+
+```bash
+# Build WASM with release optimizations
+wasm-pack build --target web --release
+
+# Install dependencies and build webpack bundle
+cd www
+npm ci
+npm run build
+
+# Serve the dist folder to test
+npx http-server dist
+```
+
+The production build will be in `www/dist/` and can be deployed to any static hosting service.
+
 ## Prerequisites
 
 - [Rust](https://rustup.rs/) (latest stable)
